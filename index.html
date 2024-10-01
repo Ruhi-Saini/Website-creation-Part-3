@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruhi's Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+       
+        <!-- Navigation Bar -->
+        <nav class="navbar">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#portfolio">Our Dishes</a></li>
+                <li><a href="#testimonials">What Our Customers Say</a></li>
+                <li><a href="#reservation">Reservation</a></li>
+            </ul>
+        </nav>
+
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo.webp" alt="Ruhi's Restaurant Logo" />
+        </div>
+
+        <!-- Banner -->
+        <div class="banner">
+            <h1>Welcome to Ruhi's Restaurant</h1>
+            <p>Fine Dining Experience</p>
+        </div>
+    </header>
+
+    <!-- About Us Section -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to Ruhi's Restaurant! We serve the finest cuisine with fresh ingredients and a touch of elegance. Join us for a memorable dining experience.</p>
+        </div>
+        
+    </section>
+   
+    
+
+
+    <!-- Our Dishes Section (Portfolio) -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <h2>Our Dishes</h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="french fries.jpeg" alt="Dish 1">
+                    <div class="overlay">
+                        <h3>French Fries</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="hameburger.jpeg" alt="Dish 2">
+                    <div class="overlay">
+                        <h3>Hameburger</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="pizza.jpeg" alt="Dish 3">
+                    <div class="overlay">
+                        <h3>American Pizza</h3>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                <img src="sushi.webp" alt="Dish 4">
+                <div class="overlay">
+                    <h3>Sushi </h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial">
+                <p>"The best dining experience I've ever had! The ambiance and food were exceptional." - Jane Doe</p>
+            </div>
+            <div class="testimonial">
+                <p>"Ruhi's Restaurant offers a unique and delicious menu that keeps me coming back." - John Smith</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section" id="reservation">
+        <div class="container">
+            <h2>Make a Reservation</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="date">Reservation Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Reservation Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <label for="people">Number of People:</label>
+                <input type="number" id="people" name="people" min="1" required>
+
+                <button type="submit">Reserve Now</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback-section" id="feedback">
+        <div class="container">
+            <h2>Feedback</h2>
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Feedback:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer with Social Media Links -->
+    <footer>
+        <div class="container">
+            <p>Follow us on:</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+                <a href="#">Twitter</a>
+            </div>
+            <p>&copy; 2024 Ruhi's Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

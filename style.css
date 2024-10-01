@@ -1,0 +1,339 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background: #f9f9f9; /* Light background for the entire body */
+}
+
+/* Centering the logo */
+.logo {
+    text-align: center; /* Center align the logo */
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background for navbar */
+    padding: 15px 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative; /* Position relative for pseudo-elements */
+}
+
+.nav-links li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 15px; /* Padding for clickable area */
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-links li a:hover {
+    color: #ff6b6b; /* Change color on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+
+/* Add underline effect on hover */
+.nav-links li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ff6b6b; /* Underline color */
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.nav-links li a:hover::after {
+    transform: scaleX(1); /* Animate the underline */
+}
+
+/* Hamburger Menu for Mobile */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: white; /* Color for hamburger icon */
+}
+
+/* Banner styles */
+.banner {
+    background: linear-gradient(45deg, #ff6b6b, #f8cdda);
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    animation: textGlow 1.5s infinite alternate;
+}
+
+.banner p {
+    font-size: 24px;
+}
+
+/* Banner text glow animation */
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.5);
+    }
+}
+
+/* Section styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section {
+    background-color: #ffe4e1; /* Light pink */
+}
+
+.portfolio-section {
+    background-color: #fafad2; /* Light golden */
+}
+
+.testimonials-section {
+    background-color: #f0e68c; /* Light khaki */
+}
+
+.reservation-section {
+    background-color: #d0f0c0; /* Light green */
+}
+
+/* Feedback Section with Animated Gradient */
+.feedback-section {
+    background: linear-gradient(45deg, #ff6b6b, #f8cdda, #ff6b6b);
+    background-size: 300% 300%;
+    animation: gradientAnimation 5s ease infinite; /* Gradient animation */
+    text-align: center;
+    color: #fff;
+    padding: 60px 20px;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Section Headings */
+.about-section h2,
+.portfolio-section h2,
+.testimonials-section h2,
+.reservation-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Testimonials */
+.testimonial {
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Reservation Section */
+.reservation-section form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.reservation-section label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.reservation-section input,
+.reservation-section button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Button styles */
+.reservation-section button {
+    background-color: #ff6b6b; /* Button color */
+    color: white; /* Button text color */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.reservation-section button:hover {
+    background-color: #ff4c4c; /* Darken button on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Feedback Section */
+.feedback-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #fff;
+}
+
+/* Feedback textarea */
+.feedback-section textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-media a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+/* Portfolio Section Styles */
+.portfolio-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center the grid */
+}
+
+.portfolio-item {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effect */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.portfolio-item img {
+    width: 100%; /* Make image responsive */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Block display */
+    border-radius: 10px; /* Match the item's border radius */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.portfolio-item:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
